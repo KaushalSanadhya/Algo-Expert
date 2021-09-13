@@ -1,0 +1,31 @@
+using namespace std;
+
+bool isPalindrome(string str) 
+{
+	if(str.length()==1)
+		return true;
+	else
+	{
+		auto itr1=str.begin();
+		auto itr2=str.end()-1;
+		bool flag=false;
+		while(itr2 -itr1 >=1)
+		{
+			if (*itr1==*itr2)
+			{
+				itr1++;itr2--;
+			}
+			else
+			{
+				flag=true;break;
+			}
+			
+		}
+		
+		if(flag==false)
+			return true;
+		else
+			return false;
+		
+	}
+}
